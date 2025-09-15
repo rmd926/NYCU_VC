@@ -1,51 +1,85 @@
 # Homework #1 – Color Transform
 
-> Author: 312553024 蘇柏叡 
-> Date: 2025/09/15
+**Author:** 312553024 蘇柏叡
+**Date:** 2025/09/15
+
+---
 
 ## Requirement
 
-- Please represent “lena.png” in terms of RGB, YUV, and YCbCr.
-    1. RGB -> YUV:
-    <img width="334" height="66" alt="image" src="https://github.com/user-attachments/assets/2785259a-10ea-4a91-9e5f-cfcc71e9fc01" />
+* Represent **lena.png** in **RGB, YUV, YCbCr**.
 
-    2. RGB -> YCbCr:
-    <img width="842" height="172" alt="image" src="https://github.com/user-attachments/assets/80f0f24a-47cb-43e7-8c85-953fb55a9cf8" />
+  1. **RGB → YUV** <img width="339" height="66" alt="RGB→YUV" src="https://github.com/user-attachments/assets/2a42c9e2-765e-48d4-8d63-6fc33b87cdcd" />
+  2. **RGB → YCbCr** <img width="842" height="172" alt="RGB→YCbCr" src="https://github.com/user-attachments/assets/80f0f24a-47cb-43e7-8c85-953fb55a9cf8" />
 
-- In any programming language you are comfortable with (C/C++/Python/MATLAB).
-- Output 8 grayscale images representing R, G, B, Y, U, V, Cb, and Cr, respectively.
-- **Do not** use any ready-made functions to transform the color.
-- You are allowed to use image reading/writing APIs.
-- Deadline: 2024/09/30 13:19.
-- Compressed as a single ZIP file.
-- Required files :
-    1. **VC_HW1_[student_id].pdf**: Report PDF
-    2. **VC_HW1_[student_id].zip**: Source code (C/C++/Python/MATLAB) with a **README** file instructing the TAs on how to run your code.
+* Language: C/C++/Python/MATLAB（本專案以 Python 實作）
 
-## How to run?
+* Output: **8-bit grayscale** images — `R, G, B, Y, U, V, Cb, Cr`
 
-1. Move into this folder
-    
-    ```bash
-    cd ./VC_HW1_312553024/
-    ```
-    
-2. Create this conda environment
-    
-    ```bash
-    conda env create -f environment.yml
-    ```
-    
-3. Activate this conda environment
-    
-    ```bash
-    conda activate 1131-video-compression-HW1
-    ```
-    
-4. Run this code
-    
-    ```bash
-    python src/color_transform.py
-    ```
-    
-5. The images representing R, G, B, Y, U, V, Cb, and Cr will be saved in the `image/` folder
+* **No** ready-made color transform functions
+
+* Image I/O APIs allowed
+
+* Deadline: **2025/09/29 13:19**
+
+* Submit as a single ZIP
+
+**Required files**
+
+1. `VC_HW1_[student_id].pdf` — Report
+2. `VC_HW1_[student_id].zip` — Source code + **README**
+
+---
+
+## Environment
+
+* Python 3.8+
+* numpy
+* Pillow
+
+```bash
+# venv (minimal)
+python -m venv .venv
+# Windows: .venv\Scripts\activate
+source .venv/bin/activate
+pip install -U numpy pillow
+```
+
+或使用 Conda（若提供 `environment.yml`）：
+
+```bash
+conda env create -f environment.yml
+conda activate 1131-video-compression-HW1
+```
+
+---
+
+## How to Run
+
+```bash
+python main.py --input /path/to/lena.png --outdir ./outputs
+```
+
+* `--input, -i`：輸入影像路徑（任一 Pillow 可讀格式，程式內統一轉為 RGB）
+* `--outdir, -o`：輸出資料夾（自動建立）
+
+---
+
+## Output
+
+```
+outputs/
+├─ R.png   ├─ G.png   ├─ B.png
+├─ Y.png   ├─ U.png   ├─ V.png
+├─ Cb.png  └─ Cr.png
+```
+
+* 全部為 **8-bit 單通道** PNG（Pillow `L` 模式）
+
+---
+
+## Notes
+
+* 僅使用 Pillow 進行 **讀寫與通道統一**（`convert("RGB")`），色彩轉換皆以手動係數計算。
+* 若課程要求 **YCbCr limited-range**（BT.601 studio-range），可改用 16–235／16–240 公式並另存對應通道。
+* 需要四捨五入時可於輸出前加入 `np.rint` 再轉 `uint8`。

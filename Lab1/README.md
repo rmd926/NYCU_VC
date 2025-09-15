@@ -9,8 +9,10 @@
 
 * Represent **lena.png** in **RGB, YUV, YCbCr**.
 
-  1. **RGB → YUV** <img width="339" height="66" alt="RGB→YUV" src="https://github.com/user-attachments/assets/2a42c9e2-765e-48d4-8d63-6fc33b87cdcd" />
-  2. **RGB → YCbCr** <img width="842" height="172" alt="RGB→YCbCr" src="https://github.com/user-attachments/assets/80f0f24a-47cb-43e7-8c85-953fb55a9cf8" />
+  1. **RGB → YUV**
+     <img width="339" height="66" alt="RGB→YUV" src="https://github.com/user-attachments/assets/2a42c9e2-765e-48d4-8d63-6fc33b87cdcd" />
+  2. **RGB → YCbCr**
+     <img width="842" height="172" alt="RGB→YCbCr" src="https://github.com/user-attachments/assets/80f0f24a-47cb-43e7-8c85-953fb55a9cf8" />
 
 * Language: C/C++/Python/MATLAB（本專案以 Python 實作）
 

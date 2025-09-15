@@ -59,7 +59,7 @@ conda activate 1131-video-compression-HW1
 ## How to Run
 
 ```bash
-python main.py --input /path/to/lena.png --outdir ./outputs
+python main.py --input /path/to/lena.png --outdir ./result
 ```
 
 * `--input, -i`：輸入影像路徑（任一 Pillow 可讀格式，程式內統一轉為 RGB）
@@ -70,7 +70,7 @@ python main.py --input /path/to/lena.png --outdir ./outputs
 ## Output
 
 ```
-outputs/
+result/
 ├─ R.png   ├─ G.png   ├─ B.png
 ├─ Y.png   ├─ U.png   ├─ V.png
 ├─ Cb.png  └─ Cr.png
@@ -83,5 +83,4 @@ outputs/
 ## Notes
 
 * 僅使用 Pillow 進行 **讀寫與通道統一**（`convert("RGB")`），色彩轉換皆以手動係數計算。
-* 若課程要求 **YCbCr limited-range**（BT.601 studio-range），可改用 16–235／16–240 公式並另存對應通道。
-* 需要四捨五入時可於輸出前加入 `np.rint` 再轉 `uint8`。
+

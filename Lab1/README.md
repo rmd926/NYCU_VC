@@ -40,26 +40,16 @@
 * Pillow
 
 ```bash
-# venv (minimal)
-python -m venv .venv
-# Windows: .venv\Scripts\activate
-source .venv/bin/activate
-pip install -U numpy pillow
+pip install requriements.txt
 ```
 
-或使用 Conda（若提供 `environment.yml`）：
-
-```bash
-conda env create -f environment.yml
-conda activate 1131-video-compression-HW1
-```
 
 ---
 
 ## How to Run
 
 ```bash
-python main.py --input /path/to/lena.png --outdir ./result
+python color_transform.py --input /path/to/lena.png --outdir ./result
 ```
 
 * `--input, -i`：輸入影像路徑（任一 Pillow 可讀格式，程式內統一轉為 RGB）

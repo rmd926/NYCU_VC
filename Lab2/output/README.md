@@ -1,0 +1,1 @@
+- The DCT coefficients in the log domain and the reconstructed images will be saved in the `output/` folder

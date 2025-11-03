@@ -1,7 +1,7 @@
 # Homework #3 – Motion Estimation & Compensation
 
-> **Author:** 313553024 蘇柏叡
-> **Date:** 2025/11/03
+> Author: 313553024 蘇柏叡  
+> Date: 2025/11/03
 
 ---
 

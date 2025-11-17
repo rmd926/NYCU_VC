@@ -36,7 +36,7 @@ Due: Monday, 24 November 2025, 1:19 PM
 * numpy
 * opencv-python
 * matplotlib
-* pickle（用來儲存 RLE 結果）
+
 
 **Install**
 

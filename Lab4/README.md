@@ -1,7 +1,9 @@
 # Homework #4 – Entropy Coding
 
-> Author: 313553024 蘇柏叡
-> Date: 2025/11/09
+> Author: 313553024 蘇柏叡  
+> Date: 2025/11/03
+
+---
 
 Opened: Sunday, 9 November 2025, 12:00 AM
 Due: Monday, 24 November 2025, 1:19 PM

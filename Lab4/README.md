@@ -80,4 +80,5 @@ encoded_image/
 
 ---
 > Ref: [https://www.youtube.com/watch?v=Q2aEzeMDHMA](https://www.youtube.com/watch?v=Q2aEzeMDHMA)
+> 
 > Ref: [https://q-viper.github.io/2021/05/24/coding-run-length-encoding-in-python/](https://q-viper.github.io/2021/05/24/coding-run-length-encoding-in-python/)

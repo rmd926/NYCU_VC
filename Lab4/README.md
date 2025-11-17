@@ -1,7 +1,7 @@
 # Homework #4 – Entropy Coding
 
 > Author: 313553024 蘇柏叡  
-> Date: 2025/11/03
+> Date: 2025/11/17
 
 ---
 

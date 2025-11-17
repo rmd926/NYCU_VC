@@ -78,5 +78,5 @@ encoded_image/
 * Zigzag 掃描後，RLE 以 `(0, count)` 表示連續零值，以 `(value, 1)` 記錄非零係數。
 * 編碼檔案大小以 `qtable1.pkl`、`qtable2.pkl` 的檔案大小作近似比較，並可額外計算 PSNR 作為畫質指標。
 
-Ref: [https://www.youtube.com/watch?v=Q2aEzeMDHMA](https://www.youtube.com/watch?v=Q2aEzeMDHMA)
-Ref: [https://q-viper.github.io/2021/05/24/coding-run-length-encoding-in-python/](https://q-viper.github.io/2021/05/24/coding-run-length-encoding-in-python/)
+> Ref: [https://www.youtube.com/watch?v=Q2aEzeMDHMA](https://www.youtube.com/watch?v=Q2aEzeMDHMA)
+> Ref: [https://q-viper.github.io/2021/05/24/coding-run-length-encoding-in-python/](https://q-viper.github.io/2021/05/24/coding-run-length-encoding-in-python/)

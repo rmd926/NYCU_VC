@@ -24,7 +24,7 @@ def main():
     ap.add_argument("--x26x_preset", default="fast")
     ap.add_argument("--aom_cpu_used", type=int, default=6)
     ap.add_argument("--svt_preset", type=int, default=8)
-    ap.add_argument("--psnr", action="store_true", help="Compute PSNR (slower)")
+    ap.add_argument("--ps", action="store_true", help="Compute PSNR/SSIM (slower)")
     args = ap.parse_args()
 
     if not has_encoder(args.codec):

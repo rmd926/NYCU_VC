@@ -53,12 +53,12 @@ Open the URL shown in terminal (default: http://127.0.0.1:7860)
 
 Manual CRF:
 ```bash
-python cli_encode.py --input test.mp4 --output out.mp4 --codec libx265 --mode crf --crf 32
+python cli_encode.py --input Big_Buck_Bunny_1080_10s_5MB.mp4 --output out.mp4 --codec libx264 --mode bpp --target_bpp 0.01 --psnr --ssim  
 ```
 
 Target BPP:
 ```bash
-python cli_encode.py --input test.mp4 --output out.mp4 --codec libsvtav1 --mode bpp --target_bpp 0.01
+python cli_encode.py --input test.mp4 --output out.mp4 --codec libsvtav1 --mode bpp --target_bpp 0.01 --psnr --ssim
 ```
 
 ## Dependencies

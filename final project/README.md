@@ -60,7 +60,7 @@ python cli_encode.py --input Big_Buck_Bunny_1080_10s_5MB.mp4 --output out.mp4 --
 
 Target BPP:
 ```bash
-python cli_encode.py --input test.mp4 --output out.mp4 --codec libsvtav1 --mode bpp --target_bpp 0.01 --psnr --ssim
+python cli_encode.py --input Big_Buck_Bunny_1080_10s_5MB.mp4 --output out.mp4 --codec libsvtav1 --mode bpp --target_bpp 0.01 --psnr --ssim
 ```
 
 ## Dependencies

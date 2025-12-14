@@ -5,7 +5,7 @@ import time
 from video_utils import get_video_info
 from ffmpeg_encoders import EncodeOptions, has_encoder, run_encode
 from bpp_search import find_crf_for_target_bpp
-from metrics import compute_psnr
+from metrics import compute_psnr, compute_ssim
 
 def main():
     ap = argparse.ArgumentParser(description="Video compression CLI (CRF or Target BPP)")
@@ -24,7 +24,8 @@ def main():
     ap.add_argument("--x26x_preset", default="fast")
     ap.add_argument("--aom_cpu_used", type=int, default=6)
     ap.add_argument("--svt_preset", type=int, default=8)
-    ap.add_argument("--ps", action="store_true", help="Compute PSNR/SSIM (slower)")
+    ap.add_argument("--psnr", action="store_true", help="Compute PSNR(slower)")
+    ap.add_argument("--ssim", action="store_true", help="Compute ssim(slower)")
     args = ap.parse_args()
 
     if not has_encoder(args.codec):
@@ -63,12 +64,12 @@ def main():
     t1 = time.perf_counter()
 
     psnr_val = compute_psnr(args.input, args.output) if args.psnr else None
-
+    ssim_val = compute_ssim(args.input, args.output) if args.ssim else None
     summary = {
         "input": {"path": args.input, "w": info.width, "h": info.height, "fps": info.fps, "nb_frames": info.nb_frames, "duration": info.duration},
         "encode": {"codec": args.codec, "mode": args.mode, "crf_used": chosen_crf, "time_sec": round(t1 - t0, 3), "output": args.output},
         "search": search_detail,
-        "psnr": psnr_val,
+        "psnr": psnr_val, "ssim": ssim_val,
     }
     print(json.dumps(summary, ensure_ascii=False, indent=2))
 

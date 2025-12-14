@@ -1,7 +1,7 @@
 # Video Compression Final Project
 > Team menber: 蘇柏叡、許良亦、王致雅、陳晴川
 
-> Abstract: A video compression tool with multiple encoders, GPU acceleration, and resolution scaling.
+> Intro: A video compression tool with multiple encoders, GPU acceleration, and resolution scaling.
 
 
 ## Features

@@ -51,8 +51,8 @@ Open the URL shown in terminal (default: http://127.0.0.1:7860)
 
 ## CLI Mode (Optional)
 > Please check the argumentparser before you use CLI mode.
+<img width="926" height="564" alt="image" src="https://github.com/user-attachments/assets/b8aa1f05-30e1-4c23-b32d-d082f0f29818" />
 
-![alt text](image.png)
 Manual CRF:
 ```bash
 python cli_encode.py --input Big_Buck_Bunny_1080_10s_5MB.mp4 --output out.mp4 --codec libx264 --mode bpp --target_bpp 0.01 --psnr --ssim  

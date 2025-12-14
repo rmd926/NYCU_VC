@@ -2,7 +2,7 @@
 > Team menber: 蘇柏叡、許良亦、王致雅、陳晴川
 
 > Intro: A video compression tool with multiple encoders, GPU acceleration, and resolution scaling.
-
+final project/note.md
 
 ## Features
 

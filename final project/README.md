@@ -50,7 +50,9 @@ Open the URL shown in terminal (default: http://127.0.0.1:7860)
 7. **Compress** - Click Compress to start
 
 ## CLI Mode (Optional)
+> Please check the argumentparser before you use CLI mode.
 
+![alt text](image.png)
 Manual CRF:
 ```bash
 python cli_encode.py --input Big_Buck_Bunny_1080_10s_5MB.mp4 --output out.mp4 --codec libx264 --mode bpp --target_bpp 0.01 --psnr --ssim  
